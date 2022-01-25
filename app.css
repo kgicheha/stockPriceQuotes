@@ -1,0 +1,51 @@
+#myHeader {
+    background-color: #3F76BF;
+    color: #FFFFFF;
+    padding: 30px;
+    text-align: center;
+}
+
+/* tr {
+    text-align: left;
+} */
+td {
+    text-align: right;
+}
+#stockInfo {
+    background-color: #3F76BF;
+    color: #FFFFFF;
+    margin-top: 50px;
+    border-radius: 25px;
+    border: 2px solid;
+    width: 500px;
+    height: 350px;
+    float: left;
+}
+
+#middleContent input[type=text]{
+    /* float: right;
+    padding: 6px;
+    border: none;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px; */
+}
+
+#current_date {
+    text-decoration: underline;
+}
+
+#prefPrice {
+    background-color: #3fb6bf;
+    color: #FFFFFF;
+    margin-top: 50px;
+    border-radius: 25px;
+    border: 2px solid;
+    width: 500px;
+    height: 350px;
+    float: right;
+}
+
+#prefPriceHeader {
+    text-decoration: underline;
+}
