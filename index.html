@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Stock Price Quotes</title>
+</head>
+
+<body>
+    <div id="myHeader"> 
+        <h1>STOCK PRICE QUOTES</h1>
+    </div>
+    <div id="stockInfo">
+        <table>
+            <tr>
+                <td>Symbol:</td>
+                <td>AAPL</td>
+            <tr>
+                <td>Current Price:</td>
+                <td>$165</td>
+            </tr>
+            <tr>
+                <td>52 Week High:</td>
+                <td>$185</td>
+            </tr>
+            <tr>
+                <td>Beta:</td>
+                <td>1.20</td>
+            </tr>
+            <tr>
+                <td>Dividend:</td>
+                <td>0.88</td>
+            </tr>
+            </tr>
+              <td>Div Ex Date:</td>
+              <td>11/05/2021</td>
+        </table>
+    </div>
+    
+    <div id="middleContent">
+        <div #searchInfo>
+            <input type="text" placeholder="Enter Name or Symbol">
+            <button type="submit"><i class="fa fa-search"></i></button>
+        </div>
+        <div>
+            <h2>APPLE</h2>
+            <div id="current_date">
+                <script>
+                date = new Date().toLocaleDateString();
+                document.write(date);
+                </script>
+                </div>
+        </div>
+    </div>
+    <div id="prefPrice"> 
+        <h3 id="prefPriceHeader">Preferred Entry Price</h3>
+        <table>
+            <tr>
+                <td>Good:</td>
+                <td>$162.00</td>
+            </tr>
+            <tr>
+                <td>Better:</td>
+                <td>$144.00</td>
+            </tr>
+            <tr>
+                <td>Best:</td>
+                <td>$126.00</td>
+            </tr>
+        </table>
+    </div>
+
+       
+
+
+    
+    
+</body>
+</html>
