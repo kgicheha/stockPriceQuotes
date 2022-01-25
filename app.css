@@ -4,12 +4,9 @@
     padding: 30px;
     text-align: center;
 }
-
-/* tr {
-    text-align: left;
-} */
-td {
-    text-align: right;
+tr {
+    /* Need to center the Data that's in the table */
+    padding: 350px;
 }
 #stockInfo {
     background-color: #3F76BF;
@@ -18,10 +15,15 @@ td {
     border-radius: 25px;
     border: 2px solid;
     width: 500px;
-    height: 350px;
+    height: 475px;
     float: left;
+    text-align: center;
+    font-size: 20px;
 }
 
+#stockInfoHeader {
+    text-decoration: underline;
+}
 #middleContent input[type=text]{
     /* float: right;
     padding: 6px;
@@ -29,6 +31,17 @@ td {
     margin-top: 8px;
     margin-right: 16px;
     font-size: 17px; */
+}
+
+#middleContent {
+    float: left;
+    text-align: center;
+    /* font-size: 25px; */
+}
+#searchInfo {
+    /* Increase size of searchBar */
+    width: 24px;
+    height: 24px;
 }
 
 #current_date {
@@ -42,8 +55,10 @@ td {
     border-radius: 25px;
     border: 2px solid;
     width: 500px;
-    height: 350px;
+    height: 475px;
     float: right;
+    text-align: center;
+    font-size: 20px;
 }
 
 #prefPriceHeader {
