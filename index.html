@@ -14,39 +14,64 @@
     <div id="myHeader"> 
         <h1>STOCK PRICE QUOTES</h1>
     </div>
-    <div id="stockInfo">
-        <h2 id ="stockInfoHeader">Stock Information</h2>
-        <table>
-            <tr>
-                <td>Symbol:</td>
-                <td>AAPL</td>
-            <tr>
-                <td>Current Price:</td>
-                <td>$165</td>
-            </tr>
-            <tr>
-                <td>52 Week High:</td>
-                <td>$185</td>
-            </tr>
-            <tr>
-                <td>Beta:</td>
-                <td>1.20</td>
-            </tr>
-            <tr>
-                <td>Dividend:</td>
-                <td>0.88</td>
-            </tr>
-            </tr>
-              <td>Div Ex Date:</td>
-              <td>11/05/2021</td>
-        </table>
+
+    <div id="searchInfo">
+        <form class="example" action="/action_page.php" style="margin:auto;max-width:300px">
+            <input type="text" placeholder="Enter Name or Ticker" name="search">
+            <button type="submit"><i class="fa fa-search"></i></button>
+          </form>
+    </div>
+
+    <div id="leftContent">
+        <div id="stockInfo">
+            <h2 id ="stockInfoHeader">Stock Information</h2>
+            <table>
+                <tr>
+                    <td>Ticker:</td>
+                    <td>AAPL</td>
+                <tr>
+                    <td>Current Price:</td>
+                    <td>$165</td>
+                </tr>
+                <tr>
+                    <td>52 Week High:</td>
+                    <td>$185</td>
+                </tr>
+                <tr>
+                    <td>Beta:</td>
+                    <td>1.20</td>
+                </tr>
+                <tr>
+                    <td>Dividend:</td>
+                    <td>0.88</td>
+                </tr>
+                </tr>
+                  <td>Div Ex Date:</td>
+                  <td>11/05/2021</td>
+            </table>
+        </div>
+        <div id="prefPrice"> 
+            <h2 id="prefPriceHeader">Preferred Entry Price</h2>
+            <table>
+                <tr>
+                    <td>Good:</td>
+                    <td>$162.00</td>
+                </tr>
+                <tr>
+                    <td>Better:</td>
+                    <td>$144.00</td>
+                </tr>
+                <tr>
+                    <td>Best:</td>
+                    <td>$126.00</td>
+                </tr>
+            </table>
+        </div>
     </div>
     
+    
     <div id="middleContent">
-        <div #searchInfo>
-            <input type="text" placeholder="Enter Name or Symbol">
-            <button type="submit"><i class="fa fa-search"></i></button>
-        </div>
+        
         <div>
             <h1>APPLE</h1>
             <div id="current_date">
@@ -57,28 +82,7 @@
                 </div>
         </div>
     </div>
-    <div id="prefPrice"> 
-        <h2 id="prefPriceHeader">Preferred Entry Price</h2>
-        <table>
-            <tr>
-                <td>Good:</td>
-                <td>$162.00</td>
-            </tr>
-            <tr>
-                <td>Better:</td>
-                <td>$144.00</td>
-            </tr>
-            <tr>
-                <td>Best:</td>
-                <td>$126.00</td>
-            </tr>
-        </table>
-    </div>
-
-       
-
-
     
-    
+
 </body>
 </html>

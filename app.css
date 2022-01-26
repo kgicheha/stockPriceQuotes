@@ -1,22 +1,68 @@
 #myHeader {
     background-color: #3F76BF;
     color: #FFFFFF;
-    padding: 30px;
+    padding: 15px;
     text-align: center;
 }
+
+
+/* Styles the Search field */
+form.example input[type=text] {
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 17px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 1px solid grey;
+    float: left;
+    width: 80%;
+    background: #f1f1f1;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+  
+  /* Styles the submit button */
+  form.example button {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    background: #2196F3;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  
+  form.example button:hover {
+    background: #0b7dda;
+  }
+
+  form.example::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+#searchInfo {
+    margin-top: 5px;
+    text-align: center;
+    
+}
+
 tr {
     /* Need to center the Data that's in the table */
     padding: 350px;
 }
+
 #stockInfo {
     background-color: #3F76BF;
     color: #FFFFFF;
-    margin-top: 50px;
+    margin-top: 5px;
     border-radius: 25px;
     border: 2px solid;
     width: 500px;
-    height: 475px;
-    float: left;
+    height: 275px;
     text-align: center;
     font-size: 20px;
 }
@@ -24,42 +70,34 @@ tr {
 #stockInfoHeader {
     text-decoration: underline;
 }
-#middleContent input[type=text]{
-    /* float: right;
+
+#prefPrice {
+    background-color: #3fb6bf;
+    color: #FFFFFF;
+    margin-top: 5px;
+    border-radius: 25px;
+    border: 2px solid;
+    width: 500px;
+    height: 225px;
+    text-align: center;
+    font-size: 20px;
+}
+
+#middleContent {
+    display: inline-block;
     padding: 6px;
     border: none;
     margin-top: 8px;
     margin-right: 16px;
-    font-size: 17px; */
+    font-size: 17px;
 }
 
-#middleContent {
-    float: left;
-    text-align: center;
-    /* font-size: 25px; */
-}
-#searchInfo {
-    /* Increase size of searchBar */
-    width: 24px;
-    height: 24px;
-}
 
 #current_date {
     text-decoration: underline;
 }
 
-#prefPrice {
-    background-color: #3fb6bf;
-    color: #FFFFFF;
-    margin-top: 50px;
-    border-radius: 25px;
-    border: 2px solid;
-    width: 500px;
-    height: 475px;
-    float: right;
-    text-align: center;
-    font-size: 20px;
-}
+
 
 #prefPriceHeader {
     text-decoration: underline;
