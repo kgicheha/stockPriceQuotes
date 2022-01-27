@@ -22,65 +22,71 @@
           </form>
     </div>
 
-    <div id="leftContent">
-        <div id="stockInfo">
-            <h2 id ="stockInfoHeader">Stock Information</h2>
-            <table>
-                <tr>
-                    <td>Ticker:</td>
-                    <td>AAPL</td>
-                <tr>
-                    <td>Current Price:</td>
-                    <td>$165</td>
-                </tr>
-                <tr>
-                    <td>52 Week High:</td>
-                    <td>$185</td>
-                </tr>
-                <tr>
-                    <td>Beta:</td>
-                    <td>1.20</td>
-                </tr>
-                <tr>
-                    <td>Dividend:</td>
-                    <td>0.88</td>
-                </tr>
-                </tr>
-                  <td>Div Ex Date:</td>
-                  <td>11/05/2021</td>
-            </table>
+    <div id="container">
+        <div id="leftContent">
+            <div id="stockInfo">
+                <h2 id ="stockInfoHeader">Stock Information</h2>
+                <table>
+                    <tr>
+                        <td>Ticker:</td>
+                        <td>AAPL</td>
+                    <tr>
+                        <td>Current Price:</td>
+                        <td>$165</td>
+                    </tr>
+                    <tr>
+                        <td>52 Week High:</td>
+                        <td>$185</td>
+                    </tr>
+                    <tr>
+                        <td>Beta:</td>
+                        <td>1.20</td>
+                    </tr>
+                    <tr>
+                        <td>Dividend:</td>
+                        <td>0.88</td>
+                    </tr>
+                    </tr>
+                      <td>Div Ex Date:</td>
+                      <td>11/05/2021</td>
+                </table>
+            </div>
+            <div id="prefPrice"> 
+                <h2 id="prefPriceHeader">Preferred Entry Price</h2>
+                <table>
+                    <tr class ="goodPrice">
+                        <td>Good:</td>
+                        <td>$162.00</td>
+                    </tr>
+                    <tr class ="betterPrice">
+                        <td>Better:</td>
+                        <td>$144.00</td>
+                    </tr>
+                    <tr class = "bestPrice">
+                        <td>Best:</td>
+                        <td>$126.00</td>
+                    </tr>
+                </table>
+            </div>
         </div>
-        <div id="prefPrice"> 
-            <h2 id="prefPriceHeader">Preferred Entry Price</h2>
-            <table>
-                <tr>
-                    <td>Good:</td>
-                    <td>$162.00</td>
-                </tr>
-                <tr>
-                    <td>Better:</td>
-                    <td>$144.00</td>
-                </tr>
-                <tr>
-                    <td>Best:</td>
-                    <td>$126.00</td>
-                </tr>
-            </table>
-        </div>
-    </div>
-    
-    
-    <div id="middleContent">
         
-        <div>
-            <h1>APPLE</h1>
-            <div id="current_date">
-                <script>
-                date = new Date().toLocaleDateString();
-                document.write(date);
-                </script>
-                </div>
+        
+        <div id="middleContent">
+            
+            <div id="middleContentHeader">
+                <h1>APPLE</h1>
+                <div id="current_date">
+                    <script>
+                    date = new Date().toLocaleDateString();
+                    document.write(date);
+                    </script>
+                    </div>
+            </div>
+            <div>
+                <img src="appleChart.jpeg" alt="appleChart">
+            </div>
         </div>
+    
     </div>
     
 

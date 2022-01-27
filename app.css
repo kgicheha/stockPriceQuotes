@@ -46,13 +46,21 @@ form.example input[type=text] {
   }
 #searchInfo {
     margin-top: 5px;
-    text-align: center;
     
 }
 
-tr {
-    /* Need to center the Data that's in the table */
-    padding: 350px;
+table {
+    margin: 0 auto;
+}
+table, td {
+    border: 1px solid white;
+    width: 80%;
+    text-align: left;
+}
+
+#leftContent {
+    width: 40%;
+    float: left;
 }
 
 #stockInfo {
@@ -71,9 +79,13 @@ tr {
     text-decoration: underline;
 }
 
+#prefPriceHeader {
+    text-decoration: underline;
+    color: #FFFFFF;
+}
+
 #prefPrice {
     background-color: #3fb6bf;
-    color: #FFFFFF;
     margin-top: 5px;
     border-radius: 25px;
     border: 2px solid;
@@ -83,15 +95,30 @@ tr {
     font-size: 20px;
 }
 
-#middleContent {
-    display: inline-block;
-    padding: 6px;
-    border: none;
-    margin-top: 8px;
-    margin-right: 16px;
-    font-size: 17px;
+.goodPrice {
+    color: #bf8840;
+    font-weight: bold;
 }
 
+.betterPrice {
+    color: #76fdae;
+    font-weight: bold;
+}
+
+.bestPrice {
+    color: #bf40b7;
+    font-weight: bold;
+}
+#middleContent {
+    width: 50%;
+    float: left;
+    font-size: 17px;
+    height: 400px;
+}
+
+#middleContentHeader {
+    text-align: center;
+}
 
 #current_date {
     text-decoration: underline;
@@ -99,6 +126,3 @@ tr {
 
 
 
-#prefPriceHeader {
-    text-decoration: underline;
-}
