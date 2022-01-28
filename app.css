@@ -70,7 +70,7 @@ table, td {
     border-radius: 25px;
     border: 2px solid;
     width: 500px;
-    height: 275px;
+    height: 375px;
     text-align: center;
     font-size: 20px;
 }
@@ -113,7 +113,7 @@ table, td {
     width: 50%;
     float: left;
     font-size: 17px;
-    height: 400px;
+    height: 300px;
 }
 
 #middleContentHeader {
