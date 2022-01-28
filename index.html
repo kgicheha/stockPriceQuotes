@@ -6,6 +6,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="app.css">
+    
+    <script>
+        const api_url = 'https://www.alphavantage.co/query?function=OVERVIEW&symbol=AAPL&apikey=8B5WZ1MU1IOSD0DG';
+        async function getData() {
+            const response = await fetch(api_url);
+            const data = await response.json();
+            const { Symbol, Beta, DividendPerShare, ExDividendDate} = data; 
+
+            document.getElementById('Symbol').textContent = Symbol;
+            // document.getElementById('52WeekHigh').textContent = 52WeekHigh;
+            // document.getElementById('52WeekLow').textContent = 52WeekLow;
+            document.getElementById('Beta').textContent = Beta;
+            document.getElementById('DividendPerShare').textContent = DividendPerShare;
+            document.getElementById('ExDividendDate').textContent = ExDividendDate;
+            console.log(data);
+        }
+        getData();
+        var output = document.getElementById('output');
+    </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Stock Price Quotes</title>
 </head>
@@ -29,26 +48,30 @@
                 <table>
                     <tr>
                         <td>Ticker:</td>
-                        <td>AAPL</td>
+                        <td><span id="Symbol"></span></td>
                     <tr>
                         <td>Current Price:</td>
                         <td>$165</td>
                     </tr>
                     <tr>
                         <td>52 Week High:</td>
-                        <td>$185</td>
+                        <td><span id="52WeekHigh"></span></td>
+                    </tr>
+                    <tr>
+                        <td>52 Week Low:</td>
+                        <td><span id="52WeekLow"></span></td>
                     </tr>
                     <tr>
                         <td>Beta:</td>
-                        <td>1.20</td>
+                        <td><span id="Beta"></span></td>
                     </tr>
                     <tr>
                         <td>Dividend:</td>
-                        <td>0.88</td>
+                        <td><span id="DividendPerShare"></span></td>
                     </tr>
                     </tr>
                       <td>Div Ex Date:</td>
-                      <td>11/05/2021</td>
+                      <td><span id="ExDividendDate"></span></td>
                 </table>
             </div>
             <div id="prefPrice"> 
