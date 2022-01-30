@@ -12,20 +12,22 @@
         async function getData() {
             const response = await fetch(api_url);
             const data = await response.json();
-            const { Symbol, Beta, DividendPerShare, ExDividendDate, Description} = data; 
 
-            document.getElementById('Symbol').textContent = Symbol;
-            // document.getElementById('52WeekHigh').textContent = 52WeekHigh;
-            // document.getElementById('52WeekLow').textContent = 52WeekLow;
-            document.getElementById('Beta').textContent = Beta;
-            document.getElementById('DividendPerShare').textContent = DividendPerShare;
-            document.getElementById('ExDividendDate').textContent = ExDividendDate;
-            document.getElementById('Description').textContent = Description;
+            document.getElementById('Symbol').innerHTML= data.Symbol;
+            document.getElementById('Name').innerHTML= data.Name;
+            // document.getElementById('50DayMovingAverage').innerHTML= data.50DayMovingAverage;
+            // document.getElementById('52WeekHigh').innerHTML = data.52WeekHigh;
+            // document.getElementById('52WeekLow').innerHTML = data.52WeekLow;
+            document.getElementById('Beta').innerHTML = data.Beta;
+            document.getElementById('PERatio').innerHTML = data.PERatio;
+            document.getElementById('DividendPerShare').innerHTML= data.DividendPerShare;
+            document.getElementById('ExDividendDate').innerHTML = data.ExDividendDate;
+            document.getElementById('Description').innerHTML = data.Description;
             console.log(data);
         }
         getData();
-        var output = document.getElementById('output');
     </script>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Stock Price Quotes</title>
 </head>
@@ -52,7 +54,7 @@
                         <td><span id="Symbol"></span></td>
                     <tr>
                         <td>Current Price:</td>
-                        <td>$165</td>
+                        <td>50DayMovingAverage</td>
                     </tr>
                     <tr>
                         <td>52 Week High:</td>
@@ -61,6 +63,10 @@
                     <tr>
                         <td>52 Week Low:</td>
                         <td><span id="52WeekLow"></span></td>
+                    </tr>
+                    <tr>
+                        <td>PE Ratio:</td>
+                        <td><span id="PERatio"></span></td>
                     </tr>
                     <tr>
                         <td>Beta:</td>
@@ -98,7 +104,7 @@
         <div id="middleContent">
             
             <div id="middleContentHeader">
-                <h1>APPLE</h1>
+                <h1><span id="Name"></span></h1>
                 <div id="current_date">
                     <script>
                     date = new Date().toLocaleDateString();

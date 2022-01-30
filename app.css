@@ -119,6 +119,10 @@ table, td {
 #middleContentHeader {
     text-align: center;
 }
+#middleContentHeader h1 {
+    text-align: center;
+    text-transform: uppercase;
+}
 
 #current_date {
     text-decoration: underline;
