@@ -6,41 +6,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="app.css">
-    
-    <script>
-       
-        async function getData() {
-            const response = await fetch(api_url);
-            const data = await response.json();
-
-            document.getElementById('Symbol').innerHTML= data.Symbol;
-            document.getElementById('Name').innerHTML= data.Name;
-            // document.getElementById('50DayMovingAverage').innerHTML= data.50DayMovingAverage;
-            // document.getElementById('52WeekHigh').innerHTML = data.52WeekHigh;
-            // document.getElementById('52WeekLow').innerHTML = data.52WeekLow;
-            document.getElementById('Beta').innerHTML = data.Beta;
-            document.getElementById('PERatio').innerHTML = data.PERatio;
-            document.getElementById('DividendPerShare').innerHTML= data.DividendPerShare;
-            document.getElementById('ExDividendDate').innerHTML = data.ExDividendDate;
-            document.getElementById('Description').innerHTML = data.Description;
-            console.log(data);
-        }
-        getData();
-    </script>
+    <script defer src="./src/key.js"></script>
+    <script defer src="./src/app.js"></script>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Stock Price Quotes</title>
 </head>
 
 <body>
-    <div id="myHeader"> 
+    <div id="myHeader">
         <h1>STOCK PRICE QUOTES</h1>
     </div>
 
     <div id="searchInfo">
-        <form class="example" action="/action_page.php" style="margin:auto;max-width:300px">
+        <form id="searchForm" action="/action_page.php" style="margin:auto;max-width:300px">
             <input type="text" placeholder="Enter Name or Ticker" name="search">
-            <button type="submit"><i class="fa fa-search"></i></button>
+            <button id ='searchBtn' type="submit"><i class="fa fa-search"></i></button>
           </form>
     </div>
 
@@ -48,61 +29,77 @@
         <div id="leftContent">
             <div id="stockInfo">
                 <h2 id ="stockInfoHeader">Stock Information</h2>
+
                 <table>
                     <tr>
-                        <td>Ticker:</td>
-                        <td><span id="Symbol"></span></td>
-                    <tr>
-                        <td>Current Price:</td>
-                        <td>50DayMovingAverage</td>
+                        <tr>
+                            <td>Name:</td>
+                            <td id="name"></td>
+                        </tr>
+
+                        <tr>
+                            <td>Ticker:</td>
+                            <td id="symbol"></td>
+                        </tr>
+
+                        <tr>
+                            <td>Sector:</td>
+                            <td id="sector"></td>
+                        </tr>
+
+                        <tr>
+                            <td>Current Price:</td>
+                            <td id=movingAverage></td>
+                        </tr>
+                        <tr>
+                            <td>52 Week High:</td>
+                            <td id="52WeekHigh"></td>
+                        </tr>
+                        <tr>
+                            <td>52 Week Low:</td>
+                            <td id="52WeekLow"></td>
+                        </tr>
+                        <tr>
+                            <td>PE Ratio:</td>
+                            <td id="peRatio"></td>
+                        </tr>
+                        <tr>
+                            <td>Beta:</td>
+                            <td id="beta"></td>
+                        </tr>
+                        <tr>
+                            <td>Dividend:</td>
+                            <td id="dividendPerShare"></td>
+                        </tr>
+                        <tr>
+                            <td>Div Ex Date:</td>
+                            <td id="exDividendDate"></td>
+                        </tr>
                     </tr>
-                    <tr>
-                        <td>52 Week High:</td>
-                        <td><span id="52WeekHigh"></span></td>
-                    </tr>
-                    <tr>
-                        <td>52 Week Low:</td>
-                        <td><span id="52WeekLow"></span></td>
-                    </tr>
-                    <tr>
-                        <td>PE Ratio:</td>
-                        <td><span id="PERatio"></span></td>
-                    </tr>
-                    <tr>
-                        <td>Beta:</td>
-                        <td><span id="Beta"></span></td>
-                    </tr>
-                    <tr>
-                        <td>Dividend:</td>
-                        <td><span id="DividendPerShare"></span></td>
-                    </tr>
-                    </tr>
-                      <td>Div Ex Date:</td>
-                      <td><span id="ExDividendDate"></span></td>
                 </table>
             </div>
-            <div id="prefPrice"> 
+            <div id="prefPrice">
                 <h2 id="prefPriceHeader">Preferred Entry Price</h2>
                 <table>
                     <tr class ="goodPrice">
                         <td>Good:</td>
-                        <td>$162.00</td>
+                        <td id ='goodPriceTarget'>$162.00</td>
                     </tr>
                     <tr class ="betterPrice">
                         <td>Better:</td>
-                        <td>$144.00</td>
+                        <td id="betterPriceTarget">$144.00</td>
                     </tr>
                     <tr class = "bestPrice">
                         <td>Best:</td>
-                        <td>$126.00</td>
+                        <td id="bestPriceTarget">$126.00</td>
                     </tr>
                 </table>
             </div>
         </div>
-        
-        
+
+
         <div id="middleContent">
-            
+
             <div id="middleContentHeader">
                 <h1><span id="Name"></span></h1>
                 <div id="current_date">
@@ -111,15 +108,15 @@
                     document.write(date);
                     </script>
                     </div>
-                <p id="Description"><span id="Description"></span></p>
+                <p id="description"><span id="description"></span></p>
             </div>
             <div>
                 <img src="appleChart.jpeg" alt="appleChart">
             </div>
         </div>
-    
+
     </div>
-    
+
 
 </body>
 </html>
