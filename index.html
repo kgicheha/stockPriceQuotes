@@ -14,66 +14,67 @@
 </head>
 
 <body>
-    <div id="myHeader">
-        <h1>STOCK PRICE QUOTES</h1>
+    <div id="header">
+        <h3>SMART INVESTS</h3>
+        <div id="searchInfo">
+            <form id="searchForm" action="/action_page.php" style="margin:auto;max-width:300px">
+                <input type="text" placeholder="Enter Stock Symbol..." name="search">
+                <button id ='searchBtn' type="submit"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
     </div>
 
-    <div id="searchInfo">
-        <form id="searchForm" action="/action_page.php" style="margin:auto;max-width:300px">
-            <input type="text" placeholder="Enter Name or Ticker" name="search">
-            <button id ='searchBtn' type="submit"><i class="fa fa-search"></i></button>
-          </form>
+    <!-- Display Name and Add WatchList Here -->
+    <div id="nameWatch">
+        <h1 id="stockName"></h1>
+        <Button id="watchListButton"><span class="sign">+</span> Follow</Button>
+        <button id="removeFromWatchListButton"><span class="sign">✓</span> Following</button>
+    </div>
+    <!-- Display price and date here -->
+    <div>
+        <h1 id=movingAverage></h1>
+        <h3 id="currentDate"></h3>
     </div>
 
     <div id="container">
-        <div id="leftContent">
+        <div id="mainContent">
             <div id="stockInfo">
-                <h2 id ="stockInfoHeader">Stock Information</h2>
+                <h2 id ="stockInfoHeader">Key Statistics</h2>
 
                 <table>
                     <tr>
-                        <tr>
-                            <td>Name:</td>
-                            <td id="name"></td>
-                        </tr>
 
                         <tr>
-                            <td>Ticker:</td>
-                            <td id="symbol"></td>
-                        </tr>
-
-                        <tr>
-                            <td>Sector:</td>
-                            <td id="sector"></td>
-                        </tr>
-
-                        <tr>
-                            <td>Current Price:</td>
-                            <td id=movingAverage></td>
+                            <td>Year Range</td>
+                            <td id="yearRange"></td>
                         </tr>
                         <tr>
-                            <td>52 Week High:</td>
-                            <td id="52WeekHigh"></td>
+                            <td>Market Cap</td>
+                            <td id="marketCap"></td>
                         </tr>
                         <tr>
-                            <td>52 Week Low:</td>
-                            <td id="52WeekLow"></td>
-                        </tr>
-                        <tr>
-                            <td>PE Ratio:</td>
+                            <td>PE Ratio</td>
                             <td id="peRatio"></td>
                         </tr>
                         <tr>
-                            <td>Beta:</td>
+                            <td>Beta</td>
                             <td id="beta"></td>
                         </tr>
                         <tr>
-                            <td>Dividend:</td>
+                            <td>Dividend Yield</td>
+                            <td id="divYield"></td>
+                        </tr>
+                        <tr>
+                            <td>Dividend</td>
                             <td id="dividendPerShare"></td>
                         </tr>
                         <tr>
                             <td>Div Ex Date:</td>
                             <td id="exDividendDate"></td>
+                        </tr>
+                        <tr>
+                            <td>Target Price:</td>
+                            <td id="analystTargetPrice"></td>
                         </tr>
                     </tr>
                 </table>
@@ -83,40 +84,34 @@
                 <table>
                     <tr class ="goodPrice">
                         <td>Good:</td>
-                        <td id ='goodPriceTarget'>$162.00</td>
+                        <td id ='goodPriceTarget'></td>
                     </tr>
                     <tr class ="betterPrice">
                         <td>Better:</td>
-                        <td id="betterPriceTarget">$144.00</td>
+                        <td id="betterPriceTarget"></td>
                     </tr>
                     <tr class = "bestPrice">
                         <td>Best:</td>
-                        <td id="bestPriceTarget">$126.00</td>
+                        <td id="bestPriceTarget"></td>
                     </tr>
                 </table>
             </div>
-        </div>
 
-
-        <div id="middleContent">
-
-            <div id="middleContentHeader">
-                <h1><span id="Name"></span></h1>
-                <div id="current_date">
-                    <script>
-                    date = new Date().toLocaleDateString();
-                    document.write(date);
-                    </script>
-                    </div>
-                <p id="description"><span id="description"></span></p>
-            </div>
-            <div>
-                <img src="appleChart.jpeg" alt="appleChart">
+            <div id="followingDiv">
+                <h3>WatchList</h3>
+                <ul id="watchList"></ul>
             </div>
         </div>
+
+
 
     </div>
-
+     <!-- Display Stock Description here -->
+    <div id="stockDescription">
+            <h3>About</h3>
+            <p id="sector"></p>
+            <p id="description"></p>
+    </div>
 
 </body>
 </html>

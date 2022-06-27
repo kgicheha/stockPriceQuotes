@@ -1,132 +1,248 @@
-#myHeader {
-    background-color: #3F76BF;
-    color: #FFFFFF;
-    padding: 15px;
-    text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Google Sans", Roboto, Arial, sans-serif;
+  /* background-color: black; */
+}
+/* <!-- Changes Header/Logo and Search Div --> */
+#header {
+  background-color: black;
+  color: #ffffff;
+  height: 60px;
 }
 
+#myHeader h3 {
+  /* display: inline-block; */
+  font-family: "Product Sans", Arial, sans-serif;
+  font-size: 22px;
+  line-height: 24px;
+  padding-left: 8px;
+  position: relative;
+  top: -1.5px;
+  vertical-align: middle;
+}
 
-/* Styles the Search field */
-form.example input[type=text] {
-    box-sizing: border-box;
-    padding: 10px;
-    font-size: 17px;
-    font-family: Arial, Helvetica, sans-serif;
-    border: 1px solid grey;
-    float: left;
-    width: 80%;
-    background: #f1f1f1;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-  }
-
-  /* Styles the submit button */
-  form.example button {
-    float: left;
-    width: 20%;
-    padding: 10px;
-    background: #2196F3;
-    color: white;
-    font-size: 17px;
-    border: 1px solid grey;
-    border-left: none;
-    cursor: pointer;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-  }
-
-  form.example button:hover {
-    background: #0b7dda;
-  }
-
-  form.example::after {
-    content: "";
-    clear: both;
-    display: table;
-  }
 #searchInfo {
-    margin-top: 5px;
-
+  width: 1000px;
+  height: 100%;
+  /* display: block; */
+  margin: 10px auto;
+}
+/* Styles the Search field */
+#searchForm input[type="text"] {
+  box-sizing: border-box;
+  padding: 10px;
+  font-size: 17px;
+  font-family: Arial, Helvetica, sans-serif;
+  border: 1px solid grey;
+  float: left;
+  width: 80%;
+  background: #f1f1f1;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
 
-table {
-    margin: 0 auto;
+/* Styles the submit button */
+#searchForm button {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  background: #f1f1f1;
+  color: black;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
-table, td {
-    border: 1px solid white;
-    width: 80%;
-    text-align: left;
+*/ #searchForm button:hover {
+  background: #0b7dda;
 }
 
-#leftContent {
-    width: 40%;
-    float: left;
+#searchForm::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* <!-- Changes Name and Add WatchList Div --> */
+#nameWatch {
+  border-radius: 4px;
+  border: 1px solid #f1f1f1;
+  box-shadow: 0 0 4px;
+}
+#stockName {
+  margin: 0;
+  padding-top: 20px;
+  font-size: 2.25rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 2rem;
+}
+
+#watchListButton {
+  display: inline;
+  float: right;
+  padding: 0 16px 0 10px;
+  letter-spacing: 0.01785714em;
+  font-size: 0.875rem;
+  font-weight: 500;
+  background-color: #fff;
+  line-height: 1.25rem;
+  border-radius: 24px;
+  width: auto;
+  margin-bottom: 2px;
+  border-width: 0;
+  box-shadow: 0px 1px 2px 0px rgb(60 64 67 / 30%),
+    0px 1px 3px 1px rgb(60 64 67 / 15%);
+  color: #3c4043;
+  height: 32px;
+  cursor: pointer;
+}
+#removeFromWatchListButton{
+  display: none;
+  float: right;
+  padding: 0 16px 0 10px;
+  letter-spacing: 0.01785714em;
+  font-size: 0.875rem;
+  font-weight: 500;
+  background-color: #fff;
+  line-height: 1.25rem;
+  border-radius: 24px;
+  width: auto;
+  margin-bottom: 2px;
+  border-width: 0;
+  box-shadow: 0px 1px 2px 0px rgb(60 64 67 / 30%),
+    0px 1px 3px 1px rgb(60 64 67 / 15%);
+  color: #3c4043;
+  height: 32px;
+  cursor: pointer;
+}
+
+.sign {
+  color: #1a73e8;
+  margin-right: 8px;
+}
+/* <!-- Changes Price and Date Div --> */
+#movingAverage {
+  font-size: 2.25rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 2.75rem;
+}
+
+#currentDate {
+  font-weight: normal;
+}
+/* <!-- Changes Table Divs --> */
+#stockInfo table {
+  font-size: 1.25rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.75rem;
+  border-radius: 12px;
+  margin-bottom: 16px;
+  padding: 16px 16px 0 16px;
+  /* box-sizing: border-box; */
+}
+#stockInfo td {
+  border-bottom: 1px #dadce0 solid;
 }
 
 #stockInfo {
-    background-color: #3F76BF;
-    color: #FFFFFF;
-    margin-top: 5px;
-    border-radius: 25px;
-    border: 2px solid;
-    width: 500px;
-    height: 375px;
-    text-align: center;
-    font-size: 20px;
+  background-color: #3f76bf;
+  color: #ffffff;
+  float: left;
+  margin: 25px;
+  border-radius: 25px;
+  /* border: 2px solid; */
+  width: 500px;
+  height: 375px;
 }
 
 #stockInfoHeader {
-    text-decoration: underline;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.5rem;
 }
 
 #prefPriceHeader {
-    text-decoration: underline;
-    color: #FFFFFF;
+  color: #ffffff;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.5rem;
 }
 
 #prefPrice {
-    background-color: #3fb6bf;
-    margin-top: 5px;
-    border-radius: 25px;
-    border: 2px solid;
-    width: 500px;
-    height: 225px;
-    text-align: center;
-    font-size: 20px;
+  float: left;
+  background-color: #3fb6bf;
+  margin: 25px;
+  border-radius: 25px;
+  width: 500px;
+  height: 375px;
+  text-align: center;
 }
 
 .goodPrice {
-    color: #bf8840;
-    font-weight: bold;
+  color: #bf8840;
+  font-weight: bold;
 }
 
 .betterPrice {
-    color: #76fdae;
-    font-weight: bold;
+  color: #76fdae;
+  font-weight: bold;
 }
 
 .bestPrice {
-    color: #bf40b7;
-    font-weight: bold;
-}
-#middleContent {
-    width: 50%;
-    float: left;
-    font-size: 17px;
-    height: 300px;
+  color: #bf40b7;
+  font-weight: bold;
 }
 
-#middleContentHeader {
-    text-align: center;
-}
-#middleContentHeader h1 {
-    text-align: center;
-    text-transform: uppercase;
+/* <!-- Changes WatchList Div --> */
+#followingDiv {
+  border: black;
+  border-radius: 25px;
 }
 
-#current_date {
-    text-decoration: underline;
+#followingDiv h3 {
+  justify-content: center;
+  font-size: 1.25rem;
+  font-weight: 400;
+  letter-spacing: 0.025em;
+  line-height: 1.5rem;
+}
+#watchList {
+  letter-spacing: 0.025em;
+  font-size: 1rem;
+  font-weight: 400;
+  padding-bottom: 16px;
+  line-height: 1.4;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
-
-
+/* <!-- Changes Stock Description Div --> */
+#stockDescription {
+margin-top: 25px;
+}
+#stockDescription h3 {
+  justify-content: center;
+  font-size: 1.25rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+}
+#stockDescription p {
+  letter-spacing: 0.025em;
+  font-size: 1rem;
+  font-weight: 400;
+  padding-bottom: 16px;
+  line-height: 1.4;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
